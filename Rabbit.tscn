@@ -5,9 +5,10 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 28.3823
-height = 38.9774
+height = 21.7072
 
 [node name="Rabbit" type="KinematicBody2D"]
+collision_mask = 14
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -20,4 +21,5 @@ animation = "idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 12.918 )
 shape = SubResource( 1 )

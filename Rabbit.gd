@@ -1,9 +1,10 @@
 extends KinematicBody2D
 
 var velocity = Vector2(0,0)
+var coins = 0
 const SPEED = 180
 const GRAVITY = 35
-const JUMPFORCE = -1000
+const JUMPFORCE = -800
 
 func _physics_process(delta):
 	if Input.is_action_pressed("right"):
@@ -29,7 +30,12 @@ func _physics_process(delta):
 	
 	velocity.x = lerp(velocity.x,0,0.1)
 	
+	if coins == 3:
+		get_tree().change_scene("res://Level1.tscn")
 
 
 func _on_Fallzone_body_entered(body):
 	get_tree().change_scene("res://Level1.tscn")
+
+func add_coin():
+	coins += 1
