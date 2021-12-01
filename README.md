@@ -1,4 +1,4 @@
-# Finding a Nemo
+# Finding Nemo
 
 # Contributions by
 Hyunbin Park
