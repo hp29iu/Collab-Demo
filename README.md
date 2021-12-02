@@ -20,7 +20,7 @@ A surprise that we encountered is how were able to make the game a bit more diff
 Due to time contrasts we wanted to make a final boss stage with King Dennis but adding on more juicy features and design was a challenge for us and in the end was not feasible. 
 
 ## Implementation
-Assets downloaded from kenney.nl 
+Assets downloaded from https://www.kenney.nl
 Music downloaded from https://patrickdearteaga.com/royalty-free-music/
 
 Features include: 
