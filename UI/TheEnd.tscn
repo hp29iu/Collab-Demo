@@ -9,23 +9,23 @@
 [ext_resource path="res://Assets/Players/bunny1_walk2.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Players/bunny1_walk1.png" type="Texture" id=8]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=1]
 size = 70
 outline_color = Color( 0.0941176, 0.176471, 0.847059, 1 )
 font_data = ExtResource( 4 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.376471, 0.254902, 0.67451, 1 )
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=3]
 size = 20
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=9]
+[sub_resource type="DynamicFont" id=4]
 size = 20
 font_data = ExtResource( 3 )
 
@@ -36,7 +36,7 @@ corner_radius_top_right = 30
 corner_radius_bottom_right = 30
 corner_radius_bottom_left = 30
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
@@ -44,7 +44,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=11]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
 "frames": [ ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
@@ -69,7 +69,7 @@ margin_left = 316.421
 margin_top = 150.184
 margin_right = 719.421
 margin_bottom = 235.184
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.129412, 0.027451, 0.027451, 1 )
 text = "THE END"
 align = 1
@@ -80,7 +80,7 @@ margin_left = 404.127
 margin_top = 388.385
 margin_right = 649.127
 margin_bottom = 532.385
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -90,7 +90,7 @@ margin_left = 40.587
 margin_top = 45.13
 margin_right = 204.587
 margin_bottom = 103.13
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 3 )
 text = "PLAY AGAIN"
 script = ExtResource( 6 )
 
@@ -99,7 +99,7 @@ margin_left = 698.289
 margin_top = 388.385
 margin_right = 943.289
 margin_bottom = 532.385
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -109,7 +109,7 @@ margin_left = 39.6428
 margin_top = 45.13
 margin_right = 203.643
 margin_bottom = 103.13
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 4 )
 text = "QUIT"
 script = ExtResource( 5 )
 
@@ -126,7 +126,7 @@ __meta__ = {
 [node name="Female" type="AnimatedSprite" parent="."]
 position = Vector2( 263.931, 470.777 )
 scale = Vector2( 0.638215, 0.408055 )
-frames = SubResource( 10 )
+frames = SubResource( 6 )
 animation = "walk"
 frame = 1
 playing = true
@@ -134,7 +134,7 @@ playing = true
 [node name="Male" type="AnimatedSprite" parent="."]
 position = Vector2( 211.737, 470.777 )
 scale = Vector2( 0.638, 0.408 )
-frames = SubResource( 11 )
+frames = SubResource( 7 )
 playing = true
 
 [connection signal="pressed" from="Play/Play" to="Play/Play" method="_on_Play_pressed"]

@@ -48,13 +48,13 @@ margin_bottom = 600.0
 color = Color( 0.0392157, 0.184314, 0.611765, 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 316.421
-margin_top = 150.184
-margin_right = 719.421
-margin_bottom = 235.184
+margin_left = 200.455
+margin_top = 131.799
+margin_right = 821.455
+margin_bottom = 216.799
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.843137, 0.8, 0.8, 1 )
-text = "Game Title"
+text = "In Search of RYU"
 align = 1
 valign = 1
 __meta__ = {

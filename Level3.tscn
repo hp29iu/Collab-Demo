@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://UI/HUD3.gd" type="Script" id=1]
 [ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
@@ -9,10 +9,12 @@
 [ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Players/bunny2_hurt.png" type="Texture" id=9]
+[ext_resource path="res://Platform/Stone_Broken.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Player/Last.gd" type="Script" id=11]
+[ext_resource path="res://Background/ParallaxBackground2.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1641.76, 40.9006 )
+extents = Vector2( 3551.89, 40.9006 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 0.239216 )
@@ -25,7 +27,7 @@ corner_radius_bottom_left = 30
 size = 22
 font_data = ExtResource( 5 )
 
-[sub_resource type="CapsuleShape2D" id=5]
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 36.9865
 height = 26.2745
 
@@ -33,50 +35,113 @@ height = 26.2745
 
 [node name="Floors" type="Node2D" parent="."]
 
-[node name="Floor_Stone1" parent="Floors" instance=ExtResource( 3 )]
-position = Vector2( 1710.63, 2527.78 )
+[node name="Floor_Stone" parent="Floors" instance=ExtResource( 3 )]
+position = Vector2( 119.865, 551.377 )
 
 [node name="Floor_Stone2" parent="Floors" instance=ExtResource( 3 )]
-position = Vector2( 2337.69, 1854.01 )
+position = Vector2( 2125.31, 513.287 )
 
 [node name="Floor_Stone3" parent="Floors" instance=ExtResource( 3 )]
-position = Vector2( 1397.13, 1417.12 )
+position = Vector2( 2910.8, 709.767 )
 
-[node name="Stone_Small1" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 1945.07, 2431.41 )
+[node name="Floor_Stone4" parent="Floors" instance=ExtResource( 3 )]
+position = Vector2( 3926.46, 555.429 )
+
+[node name="Floor_Stone5" parent="Floors" instance=ExtResource( 3 )]
+position = Vector2( 4401.43, 741.219 )
+
+[node name="Floor_Stone6" parent="Floors" instance=ExtResource( 3 )]
+position = Vector2( 5183.64, 557.011 )
+
+[node name="Stone_Small" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 369.999, 496.478 )
 
 [node name="Stone_Small2" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 2143.06, 2340.9 )
+position = Vector2( 551.222, 588.977 )
 
 [node name="Stone_Small3" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 2324.08, 2261.7 )
+position = Vector2( 707.906, 490.815 )
 
 [node name="Stone_Small4" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 2482.47, 2171.19 )
+position = Vector2( 887.242, 417.193 )
 
 [node name="Stone_Small5" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 2646.52, 2069.37 )
+position = Vector2( 1113.77, 702.242 )
 
 [node name="Stone_Small6" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 2488.13, 1956.23 )
+position = Vector2( 1317.65, 704.13 )
 
 [node name="Stone_Small7" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 2131.75, 1769.56 )
+position = Vector2( 1493.21, 628.621 )
 
 [node name="Stone_Small8" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 1990.32, 1701.67 )
+position = Vector2( 1661.22, 545.559 )
 
 [node name="Stone_Small9" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 1848.9, 1616.82 )
+position = Vector2( 2562.11, 497.841 )
 
 [node name="Stone_Small10" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 1707.48, 1554.6 )
+position = Vector2( 1821.68, 454.947 )
 
 [node name="Stone_Small11" parent="Floors" instance=ExtResource( 6 )]
-position = Vector2( 1566.06, 1486.71 )
+position = Vector2( 2718.49, 577.825 )
+
+[node name="Stone_Small12" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1992.72, 387.065 )
+
+[node name="Stone_Small13" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2408.3, 567.527 )
+
+[node name="Stone_Small14" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2261.38, 639.846 )
+
+[node name="Stone_Small15" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 3317.11, 559.413 )
+
+[node name="Stone_Small16" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2717.02, 391.896 )
+
+[node name="Stone_Small17" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 3138.67, 633.334 )
+
+[node name="Stone_Small18" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 3507.96, 637.824 )
+
+[node name="Stone_Small19" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 3676.33, 557.007 )
+
+[node name="Stone_Small20" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 4202.93, 473.537 )
+
+[node name="Stone_Small21" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 4138.5, 743.232 )
+
+[node name="Stone_Small22" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 4645.74, 785.947 )
+
+[node name="Stone_Small23" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 4824.61, 708.526 )
+
+[node name="Stone_Small24" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 4998.14, 636.445 )
+
+[node name="Stone_Broken" parent="Floors" instance=ExtResource( 10 )]
+position = Vector2( 1074.13, 487.039 )
+
+[node name="Stone_Broken2" parent="Floors" instance=ExtResource( 10 )]
+position = Vector2( 2155.09, 325.015 )
+
+[node name="Stone_Broken3" parent="Floors" instance=ExtResource( 10 )]
+position = Vector2( 2855.27, 495.526 )
+
+[node name="Stone_Broken4" parent="Floors" instance=ExtResource( 10 )]
+position = Vector2( 4073.91, 556.329 )
+
+[node name="Stone_Broken5" parent="Floors" instance=ExtResource( 10 )]
+position = Vector2( 3777.93, 557.262 )
 
 [node name="Fallzone" type="Area2D" parent="."]
-position = Vector2( 1714.53, 2960.78 )
+position = Vector2( 3567.44, 1016.75 )
 collision_layer = 4
 __meta__ = {
 "_edit_group_": true
@@ -142,21 +207,30 @@ __meta__ = {
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 8 )]
-position = Vector2( 2350.6, 1770.07 )
+position = Vector2( 2190.9, 408.358 )
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 2963.74, 568.063 )
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 4340.68, 617.507 )
 
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Coin1" parent="Coins" instance=ExtResource( 7 )]
-position = Vector2( 1939.78, 2340 )
+position = Vector2( 1096.47, 578.223 )
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 7 )]
-position = Vector2( 2494.06, 1866.95 )
+position = Vector2( 2412.52, 485.429 )
 
 [node name="Coin3" parent="Coins" instance=ExtResource( 7 )]
-position = Vector2( 1990.46, 1613.52 )
+position = Vector2( 3139.14, 546.039 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 3781.18, 479.336 )
 
 [node name="Rabbit" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1714.88, 2442.1 )
+position = Vector2( 75.926, 418.019 )
 
 [node name="Camera2D" type="Camera2D" parent="Rabbit"]
 current = true
@@ -168,7 +242,7 @@ drag_margin_left = 0.4
 drag_margin_right = 0.4
 
 [node name="Last" type="Area2D" parent="."]
-position = Vector2( 1400.44, 1343.31 )
+position = Vector2( 5226.46, 485.588 )
 script = ExtResource( 11 )
 __meta__ = {
 "_edit_group_": true
@@ -179,10 +253,13 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Last"]
-shape = SubResource( 5 )
+shape = SubResource( 4 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 12 )]
 
 [connection signal="body_entered" from="Fallzone" to="Rabbit" method="_on_Fallzone_body_entered"]
 [connection signal="coin_collected" from="Coins/Coin1" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/Coin2" to="HUD" method="_on_coin_collected"]
 [connection signal="coin_collected" from="Coins/Coin3" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin4" to="HUD" method="_on_coin_collected"]
 [connection signal="body_entered" from="Last" to="Last" method="_on_Last_body_entered"]

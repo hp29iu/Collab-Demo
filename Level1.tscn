@@ -2,17 +2,17 @@
 
 [ext_resource path="res://Platform/Floor_cake.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Items/coin_gold.png" type="Texture" id=4]
 [ext_resource path="res://Assets/FFF_NEPSZA-BADSAG-Bold.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://UI/HUD.gd" type="Script" id=6]
 [ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Platform/Floor_cake_small.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Platform/Cake_Small.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Platform/Exit.gd" type="Script" id=9]
 [ext_resource path="res://Assets/Items/portal_yellow.png" type="Texture" id=10]
+[ext_resource path="res://Background/ParallaxBackground.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1641.76, 40.9006 )
+extents = Vector2( 3454.24, 40.9006 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 0.239216 )
@@ -33,65 +33,89 @@ height = 72.9346
 
 [node name="Floors" type="Node2D" parent="."]
 
-[node name="Floor_cake1" parent="Floors" instance=ExtResource( 1 )]
-position = Vector2( 1934.99, 2014.26 )
+[node name="Floor_cake" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 123.614, 540.422 )
 
 [node name="Floor_cake2" parent="Floors" instance=ExtResource( 1 )]
-position = Vector2( 1998.76, 1548.6 )
+position = Vector2( 1007.95, 542.627 )
 
 [node name="Floor_cake3" parent="Floors" instance=ExtResource( 1 )]
-position = Vector2( 1484.51, 1290.21 )
+position = Vector2( 2177.95, 552.541 )
 
 [node name="Floor_cake4" parent="Floors" instance=ExtResource( 1 )]
-position = Vector2( 1488.85, 721.368 )
+position = Vector2( 3205.66, 554.725 )
 
 [node name="Floor_cake5" parent="Floors" instance=ExtResource( 1 )]
-position = Vector2( 1159.68, 397.569 )
+position = Vector2( 4293.66, 558.056 )
 
-[node name="Floor_cake_small1" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1736.75, 1913.62 )
+[node name="Floor_cake6" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 5103.16, 566.966 )
 
-[node name="Floor_cake_small2" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1876.52, 1810.55 )
+[node name="Cake_Small" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 381.407, 542.445 )
 
-[node name="Floor_cake_small3" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 2028.54, 1736.55 )
+[node name="Cake_Small2" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 576.495, 542.445 )
 
-[node name="Floor_cake_small4" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 2190.58, 1668.51 )
+[node name="Cake_Small3" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 769.901, 542.445 )
 
-[node name="Floor_cake_small5" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1806.69, 1463.53 )
+[node name="Cake_Small4" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1230.71, 602.99 )
 
-[node name="Floor_cake_small6" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1652.77, 1382.2 )
+[node name="Cake_Small5" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1417.39, 663.534 )
 
-[node name="Floor_cake_small7" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1655.82, 1169.3 )
+[node name="Cake_Small6" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1604.07, 725.76 )
 
-[node name="Floor_cake_small8" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1809.74, 1073.03 )
+[node name="Cake_Small7" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1784.02, 665.216 )
 
-[node name="Floor_cake_small9" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1963.44, 978.887 )
+[node name="Cake_Small8" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1960.61, 601.308 )
 
-[node name="Floor_cake_small10" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1808.24, 866.865 )
+[node name="Cake_Small9" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2392.47, 509.951 )
 
-[node name="Floor_cake_small11" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1676.25, 796.056 )
+[node name="Cake_Small10" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2552.05, 445.195 )
 
-[node name="Floor_cake_small12" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1285.02, 649.081 )
+[node name="Cake_Small11" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2716.05, 385.195 )
 
-[node name="Floor_cake_small13" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 1104.8, 590.171 )
+[node name="Cake_Small12" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2876.05, 445.195 )
 
-[node name="Floor_cake_small14" parent="Floors" instance=ExtResource( 8 )]
-position = Vector2( 932.444, 516.392 )
+[node name="Cake_Small13" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3010.05, 513.195 )
+
+[node name="Cake_Small14" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3421.58, 513.195 )
+
+[node name="Cake_Small15" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3587.7, 588.705 )
+
+[node name="Cake_Small16" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3742.5, 513.195 )
+
+[node name="Cake_Small17" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3908.62, 449.012 )
+
+[node name="Cake_Small18" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 4082.3, 509.42 )
+
+[node name="Cake_Small19" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 4519.96, 561.219 )
+
+[node name="Cake_Small20" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 4719.99, 561.522 )
+
+[node name="Cake_Small21" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 4891.5, 563.436 )
 
 [node name="Fallzone" type="Area2D" parent="."]
-position = Vector2( 1714.98, 2186.59 )
+position = Vector2( 3467.57, 1039.26 )
 collision_layer = 4
 __meta__ = {
 "_edit_group_": true
@@ -156,28 +180,25 @@ __meta__ = {
 
 [node name="Enemies" type="Node2D" parent="."]
 
-[node name="Enemy" parent="Enemies" instance=ExtResource( 3 )]
-position = Vector2( 2002.57, 1392.46 )
-
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Coin1" parent="Coins" instance=ExtResource( 7 )]
-position = Vector2( 2187.27, 1579.63 )
+position = Vector2( 1020.09, 462.781 )
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 7 )]
-position = Vector2( 1803.71, 1376.3 )
+position = Vector2( 2184.79, 471.328 )
 
 [node name="Coin3" parent="Coins" instance=ExtResource( 7 )]
-position = Vector2( 1476.75, 1210.16 )
+position = Vector2( 3211.01, 473.799 )
 
 [node name="Coin4" parent="Coins" instance=ExtResource( 7 )]
-position = Vector2( 1673.66, 716.62 )
+position = Vector2( 4301.21, 484.672 )
 
 [node name="Coin5" parent="Coins" instance=ExtResource( 7 )]
-position = Vector2( 1110.48, 510.703 )
+position = Vector2( 4892.82, 491.475 )
 
 [node name="Rabbit" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1934.97, 1904.8 )
+position = Vector2( 72.6787, 421.623 )
 
 [node name="Camera2D" type="Camera2D" parent="Rabbit"]
 current = true
@@ -189,7 +210,7 @@ drag_margin_left = 0.4
 drag_margin_right = 0.4
 
 [node name="Exit" type="Area2D" parent="."]
-position = Vector2( 1157.72, 332.059 )
+position = Vector2( 5105.68, 518.232 )
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true
@@ -202,6 +223,8 @@ texture = ExtResource( 10 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 rotation = 1.58015
 shape = SubResource( 4 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 11 )]
 
 [connection signal="body_entered" from="Fallzone" to="Rabbit" method="_on_Fallzone_body_entered"]
 [connection signal="coin_collected" from="Coins/Coin1" to="HUD" method="_on_coin_collected"]
