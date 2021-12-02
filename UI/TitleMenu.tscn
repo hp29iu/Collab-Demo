@@ -2,17 +2,17 @@
 
 [ext_resource path="res://Assets/KiriFont.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Sniglet-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Assets/CRYSTAL-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/background.png" type="Texture" id=3]
 [ext_resource path="res://UI/Titlemenu_Play.gd" type="Script" id=4]
 [ext_resource path="res://Assets/grey_button13.png" type="Texture" id=5]
 [ext_resource path="res://UI/Titlemenu_Quit.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 70
-font_data = ExtResource( 3 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.254902, 0.407843, 0.67451, 1 )
+bg_color = Color( 0.690196, 0.545098, 0.886275, 1 )
 corner_radius_top_left = 30
 corner_radius_top_right = 30
 corner_radius_bottom_right = 30
@@ -42,18 +42,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.800128, 0.833671 )
+texture = ExtResource( 3 )
+centered = false
+
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1024.0
 margin_bottom = 600.0
-color = Color( 0.0392157, 0.184314, 0.611765, 1 )
+color = Color( 0.0392157, 0.184314, 0.611765, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
-margin_left = 200.455
-margin_top = 131.799
-margin_right = 821.455
-margin_bottom = 216.799
+margin_left = 115.698
+margin_top = 127.561
+margin_right = 921.698
+margin_bottom = 212.561
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.843137, 0.8, 0.8, 1 )
+custom_colors/font_color = Color( 0.14902, 0.027451, 0.027451, 1 )
 text = "In Search of RYU"
 align = 1
 valign = 1
@@ -186,12 +194,12 @@ align = 1
 valign = 1
 
 [node name="Jump2" type="Label" parent="."]
-margin_left = 69.2545
-margin_top = 334.03
-margin_right = 172.255
-margin_bottom = 367.03
+margin_left = 58.6599
+margin_top = 380.646
+margin_right = 161.66
+margin_bottom = 413.646
 custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.513726, 0.533333, 0.403922, 1 )
+custom_colors/font_color = Color( 0.0784314, 0.0627451, 0.0901961, 1 )
 text = "KEYS:"
 align = 1
 valign = 1
