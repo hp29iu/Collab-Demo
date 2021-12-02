@@ -8,7 +8,7 @@ Our group interpreted as someone who needs help from somebody that they can trus
 
 ## Game Play
 Player must reach across three levels to find Ryu (the friend). The player
-however must maneuver through obstacles, enemies, trick and invisible platforms. 
+however must maneuver through obstacles, enemies, and trick platforms.
 
 W - Jump A- Left D - Right
 
@@ -24,7 +24,6 @@ Assets downloaded from kenney.nl
 Music downloaded from https://patrickdearteaga.com/royalty-free-music/
 
 Features include: 
-Invisible platforms
 Trick platforms
 Character changes color when they hit obstacle 
 Coin scoring  
