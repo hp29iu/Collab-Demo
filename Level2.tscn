@@ -1,0 +1,195 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Platform/Sand_Small.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://HUD2.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Items/coin_gold.png" type="Texture" id=4]
+[ext_resource path="res://Assets/FFF_NEPSZA-BADSAG-Bold.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Platform/Sand_Broken.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Platform/Floor_sand.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1641.76, 40.9006 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.239216 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+font_data = ExtResource( 5 )
+
+[node name="Level2" type="Node2D"]
+
+[node name="Floors" type="Node2D" parent="."]
+
+[node name="Floor_sand1" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 1704.71, 2542.47 )
+
+[node name="Floor_sand2" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2750.3, 1218.95 )
+
+[node name="Floor_sand3" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2075.94, 872.606 )
+
+[node name="Floor_sand4" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 2340.53, 74.9109 )
+
+[node name="Floor_sand5" parent="Floors" instance=ExtResource( 8 )]
+position = Vector2( 3141.98, 1067.38 )
+
+[node name="Sand_Small1" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 1901.77, 2451.64 )
+
+[node name="Sand_Small2" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2061.9, 2356.9 )
+
+[node name="Sand_Small3" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2199.56, 2231.61 )
+
+[node name="Sand_Small4" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2054.5, 2096.34 )
+
+[node name="Sand_Small5" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2228.41, 1989.88 )
+
+[node name="Sand_Small6" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2403.55, 1885.81 )
+
+[node name="Sand_Small7" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2229.38, 1746.73 )
+
+[node name="Sand_Small8" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2063.95, 1645.03 )
+
+[node name="Sand_Small9" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2219.69, 1514.42 )
+
+[node name="Sand_Small10" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2397.22, 1423.47 )
+
+[node name="Sand_Small11" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2564.47, 1327.58 )
+
+[node name="Sand_Small12" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2552.48, 1135.8 )
+
+[node name="Sand_Small13" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2402.65, 1021.93 )
+
+[node name="Sand_Small14" parent="Floors" instance=ExtResource( 1 )]
+position = Vector2( 2240.84, 938.02 )
+
+[node name="Sand_Broken1" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1888.93, 2015.65 )
+
+[node name="Sand_Broken2" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2563.5, 1813.21 )
+
+[node name="Sand_Broken3" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1894.46, 1574.06 )
+
+[node name="Sand_Broken4" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2938.93, 1144.78 )
+
+[node name="Fallzone" type="Area2D" parent="."]
+position = Vector2( 1714.53, 2960.78 )
+collision_layer = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fallzone"]
+shape = SubResource( 1 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="HUD"]
+margin_left = 18.0203
+margin_top = 8.00905
+margin_right = 125.02
+margin_bottom = 84.009
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+margin_left = 30.0
+margin_top = 25.0
+margin_right = 70.0
+margin_bottom = 65.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="X" type="Label" parent="HUD"]
+margin_left = 75.0
+margin_top = 38.0
+margin_right = 90.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.835294, 0.937255, 0.0862745, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "X"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="HUD"]
+margin_left = 95.0
+margin_top = 38.0
+margin_right = 117.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.835294, 0.937255, 0.0862745, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "##"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin1" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 2753.67, 1085.92 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 507.239, -218.914 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 667.42, -221.583 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 3159.93, 950.424 )
+
+[node name="Rabbit" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1690.91, 2352.2 )
+
+[node name="Camera2D" type="Camera2D" parent="Rabbit"]
+current = true
+limit_left = 0
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.4
+drag_margin_right = 0.4
+
+[connection signal="body_entered" from="Fallzone" to="Rabbit" method="_on_Fallzone_body_entered"]
+[connection signal="coin_collected" from="Coins/Coin1" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin2" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin3" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin4" to="HUD" method="_on_coin_collected"]

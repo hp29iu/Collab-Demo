@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/Enemies/spikeMan_walk2.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Enemies/spikeMan_walk1.png" type="Texture" id=2]
+[ext_resource path="res://Enemy/Enemy.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Enemies/springMan_hurt.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Enemies/spikeMan_stand.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 21.3249, 22.3965 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 25.2686, 15.4086 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 19.9653, 8.33748 )
+
+[node name="Enemy" type="KinematicBody2D"]
+collision_layer = 16
+collision_mask = 3
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "walk"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 16.8661 )
+shape = SubResource( 2 )
+
+[node name="floor_checker" type="RayCast2D" parent="."]
+position = Vector2( 10, 0 )
+enabled = true
+cast_to = Vector2( 0, 45 )
+collision_mask = 2
+
+[node name="sides_checker" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sides_checker"]
+position = Vector2( -0.353561, 16.2635 )
+shape = SubResource( 3 )
+
+[node name="top_checker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="top_checker"]
+position = Vector2( 0.353546, -19.4454 )
+shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 3.0
+
+[connection signal="body_entered" from="sides_checker" to="." method="_on_sides_checker_body_entered"]
+[connection signal="body_entered" from="top_checker" to="." method="_on_top_checker_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
