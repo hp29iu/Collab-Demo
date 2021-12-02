@@ -30,9 +30,11 @@ func _physics_process(delta):
 	
 	velocity.x = lerp(velocity.x,0,0.1)
 	
-	if coins == 3:
-		get_tree().change_scene("res://Level2.tscn")
-
+	#if coins == 5:
+		#get_tree().change_scene("res://Level2.tscn")
+	#elif coins == 4:
+		#get_tree().change_scene("res://Level3.tscn")
+		
 
 
 func _on_Fallzone_body_entered(body):

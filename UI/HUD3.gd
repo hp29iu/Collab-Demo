@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var coins = 3
+var coins = 10
 
 func _ready():
 	$Number.text = String(coins)

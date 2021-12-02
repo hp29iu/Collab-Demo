@@ -1,0 +1,188 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://UI/HUD3.gd" type="Script" id=1]
+[ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Platform/Floor_Stone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Items/coin_gold.png" type="Texture" id=4]
+[ext_resource path="res://Assets/FFF_NEPSZA-BADSAG-Bold.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Platform/Stone_Small.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/Players/bunny2_hurt.png" type="Texture" id=9]
+[ext_resource path="res://Player/Last.gd" type="Script" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1641.76, 40.9006 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 0.239216 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=3]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 36.9865
+height = 26.2745
+
+[node name="Level3" type="Node2D"]
+
+[node name="Floors" type="Node2D" parent="."]
+
+[node name="Floor_Stone1" parent="Floors" instance=ExtResource( 3 )]
+position = Vector2( 1710.63, 2527.78 )
+
+[node name="Floor_Stone2" parent="Floors" instance=ExtResource( 3 )]
+position = Vector2( 2337.69, 1854.01 )
+
+[node name="Floor_Stone3" parent="Floors" instance=ExtResource( 3 )]
+position = Vector2( 1397.13, 1417.12 )
+
+[node name="Stone_Small1" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1945.07, 2431.41 )
+
+[node name="Stone_Small2" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2143.06, 2340.9 )
+
+[node name="Stone_Small3" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2324.08, 2261.7 )
+
+[node name="Stone_Small4" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2482.47, 2171.19 )
+
+[node name="Stone_Small5" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2646.52, 2069.37 )
+
+[node name="Stone_Small6" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2488.13, 1956.23 )
+
+[node name="Stone_Small7" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 2131.75, 1769.56 )
+
+[node name="Stone_Small8" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1990.32, 1701.67 )
+
+[node name="Stone_Small9" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1848.9, 1616.82 )
+
+[node name="Stone_Small10" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1707.48, 1554.6 )
+
+[node name="Stone_Small11" parent="Floors" instance=ExtResource( 6 )]
+position = Vector2( 1566.06, 1486.71 )
+
+[node name="Fallzone" type="Area2D" parent="."]
+position = Vector2( 1714.53, 2960.78 )
+collision_layer = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fallzone"]
+shape = SubResource( 1 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="HUD"]
+margin_left = 18.0203
+margin_top = 8.00905
+margin_right = 125.02
+margin_bottom = 84.009
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+margin_left = 30.0
+margin_top = 25.0
+margin_right = 70.0
+margin_bottom = 65.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="X" type="Label" parent="HUD"]
+margin_left = 75.0
+margin_top = 38.0
+margin_right = 90.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.835294, 0.937255, 0.0862745, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "X"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Number" type="Label" parent="HUD"]
+margin_left = 95.0
+margin_top = 38.0
+margin_right = 117.0
+margin_bottom = 63.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.835294, 0.937255, 0.0862745, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "##"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 2350.6, 1770.07 )
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin1" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 1939.78, 2340 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 2494.06, 1866.95 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 7 )]
+position = Vector2( 1990.46, 1613.52 )
+
+[node name="Rabbit" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1714.88, 2442.1 )
+
+[node name="Camera2D" type="Camera2D" parent="Rabbit"]
+current = true
+limit_left = 0
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.4
+drag_margin_right = 0.4
+
+[node name="Last" type="Area2D" parent="."]
+position = Vector2( 1400.44, 1343.31 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Last"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Last"]
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="Fallzone" to="Rabbit" method="_on_Fallzone_body_entered"]
+[connection signal="coin_collected" from="Coins/Coin1" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin2" to="HUD" method="_on_coin_collected"]
+[connection signal="coin_collected" from="Coins/Coin3" to="HUD" method="_on_coin_collected"]
+[connection signal="body_entered" from="Last" to="Last" method="_on_Last_body_entered"]

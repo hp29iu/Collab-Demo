@@ -1,0 +1,241 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Assets/KiriFont.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Sniglet-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/CRYSTAL-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://UI/Titlemenu_Play.gd" type="Script" id=4]
+[ext_resource path="res://Assets/grey_button13.png" type="Texture" id=5]
+[ext_resource path="res://UI/Titlemenu_Quit.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.254902, 0.407843, 0.67451, 1 )
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+outline_color = Color( 0.0666667, 0.00784314, 0.00784314, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 2 )
+
+[node name="TitleMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.0392157, 0.184314, 0.611765, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 316.421
+margin_top = 150.184
+margin_right = 719.421
+margin_bottom = 235.184
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.843137, 0.8, 0.8, 1 )
+text = "Game Title"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 45.6123
+margin_top = 368.633
+margin_right = 418.612
+margin_bottom = 555.633
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_left = 140.387
+margin_top = 30.0723
+margin_right = 189.387
+margin_bottom = 75.0723
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/TextureRect"]
+margin_left = 3.57043
+margin_top = 14.8167
+margin_right = 43.5704
+margin_bottom = 28.8167
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "W"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+margin_left = 27.4496
+margin_top = 101.297
+margin_right = 76.4496
+margin_bottom = 146.297
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/TextureRect2"]
+margin_left = 3.57043
+margin_top = 14.8167
+margin_right = 43.5704
+margin_bottom = 28.8167
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "A"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Panel"]
+margin_left = 203.038
+margin_top = 99.5612
+margin_right = 252.038
+margin_bottom = 144.561
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/TextureRect3"]
+margin_left = 3.57043
+margin_top = 14.8167
+margin_right = 43.5704
+margin_bottom = 28.8167
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "D"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jump" type="Label" parent="."]
+margin_left = 247.636
+margin_top = 406.572
+margin_right = 350.636
+margin_bottom = 439.572
+custom_fonts/font = SubResource( 4 )
+text = "JUMP"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" type="Label" parent="."]
+margin_left = 132.489
+margin_top = 476.164
+margin_right = 235.489
+margin_bottom = 509.164
+custom_fonts/font = SubResource( 4 )
+text = "LEFT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right" type="Label" parent="."]
+margin_left = 306.471
+margin_top = 477.287
+margin_right = 409.471
+margin_bottom = 510.287
+custom_fonts/font = SubResource( 4 )
+text = "RIGHT"
+align = 1
+valign = 1
+
+[node name="Jump2" type="Label" parent="."]
+margin_left = 69.2545
+margin_top = 334.03
+margin_right = 172.255
+margin_bottom = 367.03
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.513726, 0.533333, 0.403922, 1 )
+text = "KEYS:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Panel" parent="."]
+margin_left = 473.973
+margin_top = 391.162
+margin_right = 718.973
+margin_bottom = 535.162
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="Play"]
+margin_left = 40.1375
+margin_top = 45.1305
+margin_right = 204.137
+margin_bottom = 103.13
+custom_fonts/font = SubResource( 5 )
+text = "PLAY"
+script = ExtResource( 4 )
+
+[node name="Quit" type="Panel" parent="."]
+margin_left = 740.355
+margin_top = 389.973
+margin_right = 985.355
+margin_bottom = 533.973
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="Quit"]
+margin_left = 42.0661
+margin_top = 45.13
+margin_right = 206.066
+margin_bottom = 103.13
+custom_fonts/font = SubResource( 6 )
+text = "QUIT"
+script = ExtResource( 6 )
+
+[connection signal="pressed" from="Play/Play" to="Play/Play" method="_on_Play_pressed"]
+[connection signal="pressed" from="Quit/Quit" to="Quit/Quit" method="_on_Quit_pressed"]
