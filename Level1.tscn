@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Platform/Floor_cake.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemy/Spikes.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Items/coin_gold.png" type="Texture" id=4]
 [ext_resource path="res://Assets/FFF_NEPSZA-BADSAG-Bold.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://UI/HUD.gd" type="Script" id=6]
@@ -180,19 +181,28 @@ __meta__ = {
 
 [node name="Enemies" type="Node2D" parent="."]
 
+[node name="Spikes" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 1008.87, 505.884 )
+
+[node name="Spikes2" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 3208.3, 518.38 )
+
+[node name="Spikes3" parent="Enemies" instance=ExtResource( 3 )]
+position = Vector2( 4296.44, 522.427 )
+
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Coin1" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 1020.09, 462.781 )
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 7 )]
-position = Vector2( 2184.79, 471.328 )
+position = Vector2( 2180.55, 477.684 )
 
 [node name="Coin3" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 3211.01, 473.799 )
 
 [node name="Coin4" parent="Coins" instance=ExtResource( 7 )]
-position = Vector2( 4301.21, 484.672 )
+position = Vector2( 4300.03, 466.834 )
 
 [node name="Coin5" parent="Coins" instance=ExtResource( 7 )]
 position = Vector2( 4892.82, 491.475 )

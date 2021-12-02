@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://UI/HUD3.gd" type="Script" id=1]
 [ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Platform/Stone_Broken.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Player/Last.gd" type="Script" id=11]
 [ext_resource path="res://Background/ParallaxBackground2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Enemy/Spikes.tscn" type="PackedScene" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3551.89, 40.9006 )
@@ -214,6 +215,12 @@ position = Vector2( 2963.74, 568.063 )
 
 [node name="Enemy3" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 4340.68, 617.507 )
+
+[node name="Spikes" parent="Enemies" instance=ExtResource( 13 )]
+position = Vector2( 2739.57, 354.252 )
+
+[node name="Spikes2" parent="Enemies" instance=ExtResource( 13 )]
+position = Vector2( 4095.39, 517.868 )
 
 [node name="Coins" type="Node2D" parent="."]
 

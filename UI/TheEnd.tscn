@@ -128,13 +128,13 @@ position = Vector2( 263.931, 470.777 )
 scale = Vector2( 0.638215, 0.408055 )
 frames = SubResource( 6 )
 animation = "walk"
-frame = 1
 playing = true
 
 [node name="Male" type="AnimatedSprite" parent="."]
 position = Vector2( 211.737, 470.777 )
 scale = Vector2( 0.638, 0.408 )
 frames = SubResource( 7 )
+frame = 1
 playing = true
 
 [connection signal="pressed" from="Play/Play" to="Play/Play" method="_on_Play_pressed"]
