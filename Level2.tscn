@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Platform/Sand_Small.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Assets/Items/portal_yellow.png" type="Texture" id=10]
 [ext_resource path="res://Background/ParallaxBackground3.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Enemy/Spikes.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/My Memory Lane.ogg" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2814.36, 40.9006 )
@@ -265,6 +266,10 @@ rotation = 1.58015
 shape = SubResource( 4 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 11 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+autoplay = true
 
 [connection signal="body_entered" from="Fallzone" to="Rabbit" method="_on_Fallzone_body_entered"]
 [connection signal="coin_collected" from="Coins/Coin1" to="HUD" method="_on_coin_collected"]

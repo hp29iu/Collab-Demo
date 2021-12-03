@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://UI/HUD3.gd" type="Script" id=1]
 [ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Player/Last.gd" type="Script" id=11]
 [ext_resource path="res://Background/ParallaxBackground2.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Enemy/Spikes.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Resilience.ogg" type="AudioStream" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3551.89, 40.9006 )
@@ -263,6 +264,10 @@ texture = ExtResource( 9 )
 shape = SubResource( 4 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 12 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
 
 [connection signal="body_entered" from="Fallzone" to="Rabbit" method="_on_Fallzone_body_entered"]
 [connection signal="coin_collected" from="Coins/Coin1" to="HUD" method="_on_coin_collected"]
