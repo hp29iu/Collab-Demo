@@ -1,5 +1,5 @@
 # Project Name
-MSCH-C220 Game Jam, November 2021
+MSCH-C220 Game Jam, November 2021 "Search For Ryu"
 
 ## Theme
 “You are the closest thing to a friend” 
