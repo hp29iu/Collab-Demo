@@ -22,11 +22,14 @@ Due to time contrasts we wanted to make a final boss stage with King Dennis but 
 ## Implementation
 Assets downloaded from https://www.kenney.nl
 Music downloaded from https://patrickdearteaga.com/royalty-free-music/
+Fonts downloaded from https://fontlibrary.org/
 
 Features include: 
 Trick platforms
 Character changes color when they hit obstacle 
-Coin scoring  
+Coin scoring 
+Jump on top of enemies to stop them for a moment
+Parallex Backgrounds
 
 ## References
 ## Future Development
