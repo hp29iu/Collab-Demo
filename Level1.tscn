@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Platform/Floor_cake.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Rabbit.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Platform/Exit.gd" type="Script" id=9]
 [ext_resource path="res://Assets/Items/portal_yellow.png" type="Texture" id=10]
 [ext_resource path="res://Background/ParallaxBackground.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/music1.ogg" type="AudioStream" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3454.24, 40.9006 )
@@ -235,6 +236,10 @@ rotation = 1.58015
 shape = SubResource( 4 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 11 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
 
 [connection signal="body_entered" from="Fallzone" to="Rabbit" method="_on_Fallzone_body_entered"]
 [connection signal="coin_collected" from="Coins/Coin1" to="HUD" method="_on_coin_collected"]
